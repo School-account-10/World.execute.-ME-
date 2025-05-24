@@ -7,10 +7,15 @@ class ME {
   boolean powerline = true;
   boolean protection = true;
   ArrayList<String> chess_pieces = new ArrayList<>();
-  ArrayList<String> chr = new ArrayList<>();
+  
  
-  void Mili(){
-    
+  public static String Mili(){
+    ArrayList<String> chr = new ArrayList<>();
+    chr.add("Me");
+    chr.add("you");
+    String converted_string = chr.toString();
+    return converted_string;
+
   }
   void pieceschess() {
     chess_pieces.add("pawn");
@@ -61,7 +66,9 @@ class ME {
     int mainjack = jac1 + jac2;
     return mainjack;
   }
+public class chr_info extends mili{
 
+}
   public static void main(String[] args) {
     ME ME = new ME();
     try {
