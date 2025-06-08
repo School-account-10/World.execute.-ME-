@@ -86,7 +86,7 @@ class ME {
     return inf + convertion + age;
   }
 
-  public final String world_info() { // redo later not now cause me lazy asf
+  public final String world_info() { // redo later not now cause me lazy asf then implemet random to generate seed for world
     String world = "World";
     String version = "1.0.0";
     String description = "This is a virtual world for ME.";
