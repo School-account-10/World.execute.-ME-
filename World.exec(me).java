@@ -70,15 +70,16 @@ class ME {
     String inf = Mili().get(0);
     String inf2 = "human";
     int age = 20;
-    System.out.println("chr_info1: " + inf + " Type: " + inf2 + "Age: " + age);
+    System.out.println("chr_info1: " + inf + " Type: " + inf2 + " Age: " + age);
     return inf + inf2 + age;
   }
 
   public final String chr_info2() { // fill in data
+    int mai = latancygenerator();
     String inf = Mili().get(1);
-    String inf2 = "MILLI-Diana-800b-quantized.GGUF ";
+    String inf2 = "MILLI-Diana-800b-quantized.GGUF " + " Version: 1.0.0";
     String convertion = Base64.getEncoder().encodeToString(inf2.getBytes());
-    int age = 5000;
+    int age = mai;
     System.out.println(
       "chr_info2: " + inf + " Model-name: " + convertion + " UPTIME: " + age
     );
