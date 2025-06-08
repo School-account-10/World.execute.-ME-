@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Base64;
 import java.util.Random;
 
 class ME {
@@ -7,16 +8,14 @@ class ME {
   boolean powerline = true;
   boolean protection = true;
   ArrayList<String> chess_pieces = new ArrayList<>();
-  
- 
-  public static String Mili(){
-    ArrayList<String> chr = new ArrayList<>();
-    chr.add("Me");
-    chr.add("you");
-    String converted_string = chr.toString();
-    return converted_string;
 
+  public static ArrayList<String> Mili() {
+    ArrayList<String> chr = new ArrayList<>();
+    chr.add("ME");
+    chr.add("YOU");
+    return chr;
   }
+
   void pieceschess() {
     chess_pieces.add("pawn");
     chess_pieces.add("king");
@@ -66,14 +65,43 @@ class ME {
     int mainjack = jac1 + jac2;
     return mainjack;
   }
-public class chr_info extends mili{
 
-}
+  public final String chr_info1() { // fill in data
+    String inf = Mili().get(0);
+    String inf2 = "human";
+    int age = 20;
+    System.out.println("chr_info1: " + inf + " Type: " + inf2 + "Age: " + age);
+    return inf + inf2 + age;
+  }
+
+  public final String chr_info2() { // fill in data
+    String inf = Mili().get(1);
+    String inf2 = "MILLI-Diana-800b-quantized.GGUF ";
+    String convertion = Base64.getEncoder().encodeToString(inf2.getBytes());
+    int age = 5000;
+    System.out.println(
+      "chr_info2: " + inf + " Model-name: " + convertion + " UPTIME: " + age
+    );
+    return inf + convertion + age;
+  }
+
+
+  public final String world_info() {
+    String world = "World";
+    String version = "1.0.0";
+    String description = "This is a virtual world for ME.";
+    System.out.println(
+      "World Info: " + world + ", Version: " + version + ", Description: " + description
+    );
+    return world + version + description;
+  }
   public static void main(String[] args) {
     ME ME = new ME();
     try {
       ME.pieceschess();
       ME.createallObject();
+      ME.chr_info1();
+      ME.chr_info2();
     } catch (Exception e) {
       System.out.println("object creation failed");
     }
