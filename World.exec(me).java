@@ -85,16 +85,21 @@ class ME {
     return inf + convertion + age;
   }
 
-
-  public final String world_info() {
+  public final String world_info() { // redo later not now cause me lazy asf
     String world = "World";
     String version = "1.0.0";
     String description = "This is a virtual world for ME.";
     System.out.println(
-      "World Info: " + world + ", Version: " + version + ", Description: " + description
+      "World Info: " +
+      world +
+      ", Version: " +
+      version +
+      ", Description: " +
+      description
     );
     return world + version + description;
   }
+
   public static void main(String[] args) {
     ME ME = new ME();
     try {
